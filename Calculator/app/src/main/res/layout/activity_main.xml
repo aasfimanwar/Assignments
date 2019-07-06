@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/number1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/operand"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/operand"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/operand"
+        android:layout_centerInParent="true"
+        android:text="             "/>
+
+    <TextView
+        android:id="@+id/field1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/number1"
+        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@id/space"
+        android:text="Field 1"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/space"
+        android:text="                                "
+        android:layout_above="@id/operand"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/field2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Field 2"
+        android:textSize="20sp"
+        android:layout_above="@id/number2"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/space" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/field3"
+        android:text="Result"
+        android:textSize="20sp"
+        android:layout_below="@id/operand"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/field3"
+        android:layout_centerInParent="true"
+        android:ems="10"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/mode"
+        android:layout_width="189dp"
+        android:layout_height="137dp"
+        android:layout_below="@id/result"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="85dp"
+        android:layout_toStartOf="@+id/calculate"
+        android:onClick="onMode"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="150dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="116dp"
+        android:onClick="onCalculate"
+        android:text="Calculate"
+        android:textSize="20sp" />
+</RelativeLayout>
+
